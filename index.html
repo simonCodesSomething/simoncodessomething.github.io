@@ -14,6 +14,14 @@
     .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}.project{position:relative;min-height:300px;padding:27px;border:1px solid var(--line);border-radius:22px;background:var(--surface);display:flex;flex-direction:column;overflow:hidden}.project:before{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;opacity:.27;filter:blur(10px)}.project.scan:before{background:#398be4}.project.hunter:before{background:#efaa45}.project.f1:before{background:#e9685c}.project.tiny:before{background:#6acf9c}.project>*{position:relative}.project-top{display:flex;justify-content:space-between;align-items:start}.app-icon{width:65px;height:65px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;font-weight:900;color:white;box-shadow:0 9px 22px #0003}.scan .app-icon{background:linear-gradient(135deg,#208aef,#074caa)}.hunter .app-icon{background:linear-gradient(135deg,#f7c45d,#b85c2d);color:#25202a}.f1 .app-icon{background:linear-gradient(135deg,#e85859,#7b2234)}.tiny .app-icon{background:linear-gradient(135deg,#6bc5d4,#5376ce)}.status{border:1px solid var(--line);background:#ffffff0c;padding:5px 10px;border-radius:99px;font-size:.71rem;font-weight:750;color:#d8d4e5}.project h3{font-size:1.55rem;line-height:1.15;letter-spacing:-.04em;margin:30px 0 10px}.project p{color:var(--muted);max-width:390px;font-size:.94rem}.project .project-link{margin-top:auto;display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--yellow);font-weight:800;font-size:.9rem;width:fit-content}.project .project-link:hover{text-decoration:underline}.coming{margin-top:auto;color:var(--muted);font-size:.88rem;font-weight:700}
     .lower-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.panel{padding:34px;border:1px solid var(--line);border-radius:22px;background:var(--surface)}.panel h2{font-size:2rem;letter-spacing:-.05em;line-height:1.2}.panel p{color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.tag{border:1px solid #4b4a61;padding:6px 12px;border-radius:99px;font-size:.78rem;font-weight:750;color:#dbd8e6}.support-panel{background:linear-gradient(140deg,#242239,#1a1e2f)}.coffee{font-size:2rem;display:block;margin-bottom:13px}.support-panel .btn{margin-top:10px}.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-links{display:flex;gap:20px;flex-wrap:wrap}.footer a:hover{color:var(--yellow)}
     @media(max-width:700px){.nav{min-height:72px}.nav-links{gap:14px}.nav-links a{font-size:.8rem}.brand{font-size:1rem}.brand-icon{width:37px;height:37px}.hero{padding:75px 0 70px}.project-grid,.lower-grid{grid-template-columns:1fr}.section{padding:35px 0 65px}.section-heading{align-items:start;flex-direction:column}.project{min-height:265px}.panel{padding:25px}}@media(max-width:390px){.brand small{display:none}.nav-links{gap:10px}.nav-links a{font-size:.76rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+    /* Wide portfolio artwork: keep all lettering and hobby illustrations visible. */
+    .hero{padding-top:38px;padding-bottom:74px}
+    .hero-banner{margin:0 0 48px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#061638;box-shadow:0 24px 65px rgba(0,0,0,.22)}
+    .hero-banner img{display:block;width:100%;height:auto;aspect-ratio:8/3;object-fit:contain}
+    .hero-intro{max-width:850px}
+    .hero h1{font-size:clamp(2.5rem,6vw,4.6rem);max-width:780px}
+    @media(max-width:700px){.hero{padding-top:22px;padding-bottom:52px}.hero-banner{border-radius:13px;margin-bottom:32px}.hero h1{font-size:clamp(2.3rem,9vw,3.7rem)}}
   </style>
 </head>
 <body>
@@ -25,10 +33,15 @@
   </header>
   <main id="top">
     <section class="hero container" aria-labelledby="hero-title">
+      <figure class="hero-banner">
+        <img src="assets/developer-banner.webp" width="2048" height="768" alt="Simon Codes Something — apps, projects and hobbies, featuring a toy minifigure developer, a collectible car, a basketball sneaker and a video game controller" fetchpriority="high">
+      </figure>
+      <div class="hero-intro">
       <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Indie projects, made for fun</span>
       <h1 id="hero-title">I build things<br>for the stuff <em>I love.</em></h1>
       <p class="hero-copy">Hey, I'm Simon. I make apps and side projects inspired by collecting, motorsports, games, and everyday life. Nothing too corporate — just useful ideas brought to life.</p>
       <div class="actions"><a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="https://github.com/simonCodesSomething" target="_blank" rel="noopener noreferrer">My GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
     </section>
     <section id="projects" class="section container" aria-labelledby="projects-title">
       <div class="section-heading"><div><span class="kicker">What I'm building</span><h2 id="projects-title">Projects & apps</h2></div><p>Little tools for the hobbies and interests that keep me busy.</p></div>
